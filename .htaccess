@@ -1,0 +1,24 @@
+<IfModule mod_rewrite.c>
+ 
+RewriteEngine on
+
+
+ 
+RewriteCond %{REQUEST_FILENAME} !-d
+ 
+RewriteCond %{REQUEST_FILENAME}.php -f
+ 
+RewriteRule ^(.*)$ $1.php
+
+RewriteRule ^$ bagdhan/applicant [L]
+RewriteRule ^applicant bagdhan/form_registration.php
+RewriteRule ^input_registration bagdhan/process/input_registration.php
+RewriteRule ^validation bagdhan/index.php
+RewriteRule ^english bagdhan/english.php
+RewriteRule ^psikotest bagdhan/psikotest.php
+RewriteRule ^input_b_inggris bagdhan/process/input_b_inggris.php
+RewriteRule ^input_psikotest bagdhan/process/input_psikotest.php
+RewriteRule ^validasi_pelamar bagdhan/process/validasi_pelamar.php
+RewriteRule ^logout bagdhan/process/logout.php
+ 
+</IfModule>
